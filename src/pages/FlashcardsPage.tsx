@@ -92,7 +92,7 @@ const FlashcardsPage: React.FC = () => {
         {filteredDecks.length === 0 && (
           <div className="text-center py-12">
             <p className="text-xl text-gray-500 dark:text-gray-400">
-              No flashcard decks found in this category.
+              Loading...
             </p>
           </div>
         )}
