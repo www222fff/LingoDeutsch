@@ -68,13 +68,6 @@ const FlashcardDeckPage: React.FC = () => {
     }
   };
   
-  const shuffleDeck = () => {
-    const shuffledDeck = {...deck};
-    shuffledDeck.cards = [...deck.cards].sort(() => Math.random() - 0.5);
-    setDeck(shuffledDeck);
-    setCurrentIndex(0);
-  };
-  
   const handleCardViewed = async () => {
     if (!isAuthenticated || !id || !currentCard) {
       return;
@@ -121,14 +114,6 @@ const FlashcardDeckPage: React.FC = () => {
               </p>
             </div>
             
-            <button
-              onClick={shuffleDeck}
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 
-                        dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
-              aria-label="Shuffle deck"
-            >
-              <RefreshCw className="h-5 w-5 text-gray-600 dark:text-gray-300" />
-            </button>
           </div>
           
           <div className="flex justify-center mb-8">
