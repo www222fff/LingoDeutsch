@@ -159,9 +159,9 @@
     ]
   },
   {
-    "id": "basic-3",
+    "id": "basics-3",
     "title": "Unit 3: Gesundheit, Arbeit & Helden",
-    "category": "basic",
+    "category": "basics",
     "cards": [
       {"id":"3-0001","german":"operieren +A","english":"做手术","example":"Der Chirurg wird morgen operieren.","mastered":false},
       {"id":"3-0002","german":"jemandem eine Operation machen","english":"给某人做手术","example":"Die Ärzte haben ihm eine erfolgreiche Operation gemacht.","mastered":false},
@@ -232,9 +232,9 @@
     ]
   },
   {
-    "id": "basic-4",
+    "id": "basics-4",
     "title": "Unit 4: Beruf, Bewerbung & Kommunikation",
-    "category": "basic",
+    "category": "vocabulary",
     "cards": [
       {"id":"4-0001","german":"der Feiertag, die Feiertage","english":"节日","example":"Weihnachten ist mein Lieblingsfeiertag.","mastered":false},
       {"id":"4-0002","german":"die Arbeitsstelle, die Arbeitsstellen","english":"工作岗位","example":"Ich suche eine neue Arbeitsstelle in der Stadt.","mastered":false},
@@ -344,9 +344,9 @@
     ]
   },
   {
-    "id": "basic-5",
+    "id": "basics-5",
     "title": "Unit 5: Umwelt, Nachhaltigkeit & Konsum",
-    "category": "basic",
+    "category": "vocabulary",
     "cards": [
       {"id":"5-0001","german":"konsumieren","english":"消费","example":"Wir konsumieren zu viel Plastik.","mastered":false},
       {"id":"5-0002","german":"die Pfandflasche, die Pfandflaschen","english":"回收瓶","example":"Bringe die Pfandflaschen zurück.","mastered":false},
@@ -397,9 +397,9 @@
     ]
   },
   {
-    "id": "basic-6",
+    "id": "basics-6",
     "title": "Unit 6: Zukunft, Pläne & Beziehungen",
-    "category": "basic",
+    "category": "grammar",
     "cards": [
       {"id":"6-0001","german":"übernehmen","english":"接管，承担","example":"Ich übernehme die Verantwortung.","mastered":false},
       {"id":"6-0002","german":"betreffen (betrifft)","english":"涉及，关于","example":"Das betrifft alle Mitarbeiter.","mastered":false},
