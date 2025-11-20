@@ -100,12 +100,10 @@ export async function bootstrap(env: Env) {
     await db.prepare(sql).run();
   }
 
-  const insertLesson = db.prepare(
-    'INSERT OR IGNORE INTO lessons (id, title, category, level, description, content, imageUrl) VALUES (?, ?, ?, ?, ?, ?, ?)'
-  );
-  for (const l of lessons as any[]) {
-    await insertLesson.bind(l.id, l.title, l.category, l.level, l.description, l.content, l.imageUrl ?? null).run();
-  }
+  db.exec(`
+    DELETE FROM flashcards;
+    DELETE FROM flashcard_decks;
+  `);
 
   const insertDeck = db.prepare('INSERT OR IGNORE INTO flashcard_decks (id, title, category) VALUES (?, ?, ?)');
   const insertCard = db.prepare(
@@ -118,6 +116,13 @@ export async function bootstrap(env: Env) {
     }
   }
 
+  const insertLesson = db.prepare(
+    'INSERT OR IGNORE INTO lessons (id, title, category, level, description, content, imageUrl) VALUES (?, ?, ?, ?, ?, ?, ?)'
+  );
+  for (const l of lessons as any[]) {
+    await insertLesson.bind(l.id, l.title, l.category, l.level, l.description, l.content, l.imageUrl ?? null).run();
+  }
+  
   const insertWord = db.prepare('INSERT OR IGNORE INTO daily_words (date, german, english, example) VALUES (?, ?, ?, ?)');
   for (const w of dailyWords as any[]) {
     await insertWord.bind(w.date, w.german, w.english, w.example).run();
