@@ -70,7 +70,7 @@ const LessonDetailPage: React.FC = () => {
     return (
       <div className="min-h-screen py-12 px-6 flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Lesson not found</h2>
+          <h2 className="text-2xl font-bold mb-4">Loading...</h2>
           <button 
             onClick={() => navigate('/lessons')}
             className="btn-primary"
