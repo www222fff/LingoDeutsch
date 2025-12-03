@@ -58,9 +58,18 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
 
   const speakText = (text: string) => {
     if ('speechSynthesis' in window) {
+      const synth = window.speechSynthesis;
+      const voices = synth.getVoices();
+      const germanVoice = voices.find(v => v.lang.startsWith('de'));
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'de-DE';
-      window.speechSynthesis.speak(utterance);
+      if (germanVoice) {
+        utterance.voice = germanVoice;
+        utterance.lang = germanVoice.lang;
+      } else {
+        utterance.lang = 'de-DE';
+        alert('未检测到德语发音语音包。请在系统或浏览器设置中安装德语语音包。\n\n手机用户：\n- iOS: 设置 > 辅助功能 > 朗读内容 > 声音 > 添加德语。\n- Android: 设置 > 辅助功能 > 文字转语音 > 安装德语语音。');
+      }
+      synth.speak(utterance);
     }
   };
 
